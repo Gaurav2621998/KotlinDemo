@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello World!"
+                android:id="@+id/textv"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                   app:srcCompat="@drawable/empty_dice"
+                   tools:src="@drawable/dice_1"
+
+                   android:id="@+id/img"
+        />
+
+        <Button android:layout_width="wrap_content"
+                android:id="@+id/roll_button"
+                android:text="Roll"
+                android:layout_height="wrap_content"/>
+        <Button android:layout_width="wrap_content"
+                android:id="@+id/roll_button1"
+                android:text="Roll1"
+                android:layout_height="wrap_content"/>
+
+
+        <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                                android:id="@+id/recycler"
+                                                android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</layout>
