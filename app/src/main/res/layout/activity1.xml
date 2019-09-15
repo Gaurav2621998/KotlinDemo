@@ -1,36 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                                android:orientation="horizontal"
-              android:layout_gravity="center"
-              android:weightSum="2"
-              android:gravity="center"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                                                android:layout_height="match_parent">
-
-     <android.support.v7.widget.CardView android:layout_width="wrap_content"
-                                         android:layout_height="wrap_content"
-                                            android:id="@+id/card"
-                                         app:cardCornerRadius="30dp"
-                                         android:layout_weight="1"
-                                         tools:ignore="MissingConstraints">
-        <ImageView
-                android:layout_gravity="center"
-                android:transitionName="imageview"
-
-                android:layout_width="95dp"
-                android:layout_height="96dp"
-                tools:srcCompat="@tools:sample/avatars"
-                tools:layout_editor_absoluteY="232dp" tools:layout_editor_absoluteX="16dp" android:id="@+id/imageView"/>
-    </android.support.v7.widget.CardView>
-
-    <TextView
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:transitionName="textview"
-            android:text="TextView"
+    <com.sa90.materialarcmenu.ArcMenu
+            android:id="@+id/arcmenu_android_example_layout"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="286dp"
-            tools:layout_editor_absoluteX="164dp" android:id="@+id/textView2" tools:ignore="MissingConstraints"/>
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu_color="#0fb33d"
+            app:menu_open="arc_left"
+            app:menu_ripple_color="@color/colorAccent"
+            app:menu_scr="@android:drawable/ic_input_add"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            >
+    >
 
-</LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_arc_menu_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_info"
+                app:backgroundTint="#0fb33d" />
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_arc_menu_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_alert"
+                app:backgroundTint="#0fb33d" />
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_arc_menu_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_email"
+                app:backgroundTint="#0fb33d" />
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_arc_menu_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@android:drawable/ic_dialog_map"
+                app:backgroundTint="#0fb33d" />
+
+    </com.sa90.materialarcmenu.ArcMenu>
+</RelativeLayout>
